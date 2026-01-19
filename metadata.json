@@ -1,0 +1,7 @@
+{
+  "name": "ProEspresso - Premium Coffee Experience",
+  "description": "High-end landing page for ProEspresso, a premium coffee brand dedicated to the art of perfect brewing.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
