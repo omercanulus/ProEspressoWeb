@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
           <div className="col-span-1 lg:col-span-1">
             <div className="mb-10">
               <img
-                src="logo.png"
+                src="/logo.png"
                 alt="ProEspresso Logo"
                 className="h-20 w-auto object-contain"
                 onError={(e) => {

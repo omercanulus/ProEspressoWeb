@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
       <div className="relative z-20 text-center max-w-5xl px-6 flex flex-col items-center">
         <div className="mb-12">
           <img
-            src="logo.png"
+            src="/logo.png"
             alt="ProEspresso Logo"
             className="w-full h-auto max-w-[280px] md:max-w-[450px] object-contain"
             onError={(e) => {

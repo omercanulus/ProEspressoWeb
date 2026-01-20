@@ -62,7 +62,7 @@ const Header: React.FC = () => {
             className="block transition-transform duration-300 hover:scale-105 z-50"
           >
             <img
-              src="logo.png"
+              src="/logo.png"
               alt="ProEspresso"
               className={`${isScrolled ? 'h-10' : 'h-14'} w-auto transition-all duration-500 object-contain`}
               onError={(e) => {
