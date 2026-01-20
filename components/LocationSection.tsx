@@ -17,7 +17,7 @@ const LocationSection: React.FC = () => {
               Tuzla'nın kalbinde, Vema'da nitelikli kahve deneyiminin tek adresinde sizi bekliyoruz.
             </p>
           </div>
-          
+
           <div className="flex flex-col sm:flex-row gap-6 w-full lg:w-auto">
             <div className="bg-cream-50 border border-cream-200 p-8 flex items-center gap-6 flex-grow lg:min-w-[350px]">
               <div className="w-12 h-12 rounded-full bg-coffee-500 flex items-center justify-center text-white shrink-0 shadow-lg shadow-coffee-500/20">
@@ -25,11 +25,11 @@ const LocationSection: React.FC = () => {
               </div>
               <div>
                 <p className="text-coffee-900 text-[10px] font-black uppercase tracking-[0.2em] mb-1">Merkez Mağaza</p>
-                <p className="text-coffee-800/60 text-[13px] leading-relaxed">Vema Tuzla, İçmeler, Çağdaş Sk No: 1,<br/>34947 Tuzla/İstanbul</p>
+                <p className="text-coffee-800/60 text-[13px] leading-relaxed">Vema Tuzla, İçmeler, Çağdaş Sk No: 1,<br />34947 Tuzla/İstanbul</p>
               </div>
             </div>
-            
-            <a 
+
+            <a
               href={mapUrl}
               target="_blank"
               rel="noopener noreferrer"
@@ -45,19 +45,19 @@ const LocationSection: React.FC = () => {
       {/* Full Width Integrated Map - More readable version */}
       <div className="relative w-full h-[600px] mt-10">
         <div className="absolute inset-0 transition-all duration-[2s]">
-          <iframe 
+          <iframe
             title="ProEspresso Location Map"
-            width="100%" 
-            height="100%" 
-            frameBorder="0" 
-            scrolling="no" 
-            marginHeight={0} 
-            marginWidth={0} 
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            scrolling="no"
+            marginHeight={0}
+            marginWidth={0}
             src="https://maps.google.com/maps?width=100%25&height=600&hl=tr&q=Vema+Tuzla,+%C4%B0%C3%A7meler,+%C3%87a%C4%9Fda%C5%9F+Sk+No:1,+34947+Tuzla,+%C4%B0stanbul+(ProEspresso)&t=&z=16&ie=UTF8&iwloc=B&output=embed"
             className="filter saturate-[0.8] opacity-80 hover:opacity-100 transition-opacity"
           ></iframe>
         </div>
-        
+
         {/* Subtle Overlays */}
         <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-white via-transparent to-transparent h-48"></div>
         <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-white/40 to-transparent h-48 bottom-0"></div>

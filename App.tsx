@@ -17,9 +17,11 @@ const App: React.FC = () => {
       <main className="flex-grow">
         <Hero />
 
-        <ImageCarousel />
+        <section id="galeri">
+          <ImageCarousel />
+        </section>
 
-        {/* Story Section - Lightened and Refined */}
+        {/* Story Section - Vizyonumuz */}
         <section id="story" className="py-32 bg-white">
           <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <div className="relative order-2 lg:order-1">
