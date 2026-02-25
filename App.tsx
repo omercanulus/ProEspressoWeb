@@ -23,24 +23,8 @@ const App: React.FC = () => {
 
         {/* Story Section - Vizyonumuz */}
         <section id="story" className="py-32 bg-white">
-          <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-            <div className="relative order-2 lg:order-1">
-              <div className="aspect-[4/5] bg-cream-50 overflow-hidden shadow-2xl rounded-sm">
-                <img
-                  src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                  alt="Nitelikli Kahve Sanatı"
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-[2s] scale-105 hover:scale-100"
-                />
-              </div>
-              {/* Badge lightened to Coffee-500 for better aesthetic fit */}
-              <div className="absolute -top-10 -left-10 w-48 h-48 bg-coffee-500 flex items-center justify-center p-8 text-center hidden xl:flex shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-500">
-                <span className="text-white text-[10px] font-bold tracking-[0.4em] uppercase">
-                  Est. 2024 <br /> Kusursuz <br /> Kavurma
-                </span>
-              </div>
-            </div>
-
-            <div className="space-y-10 order-1 lg:order-2">
+          <div className="max-w-4xl mx-auto px-6">
+            <div className="space-y-10">
               <div className="space-y-4">
                 <h2 className="text-coffee-500 text-[10px] font-bold tracking-[0.5em] uppercase">Vizyonumuz</h2>
                 <h3 className="text-5xl md:text-6xl font-black tracking-tighter leading-none text-coffee-900">

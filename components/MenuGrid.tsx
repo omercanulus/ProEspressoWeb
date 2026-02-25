@@ -1,67 +1,166 @@
 
-import React from 'react';
-import { MenuItem } from '../types';
+import React, { useState, useEffect } from 'react';
 
-const menuData: MenuItem[] = [
+interface MenuImage {
+  url: string;
+  alt: string;
+}
+
+const menuImages: MenuImage[] = [
   {
-    title: "Espresso Bar",
-    description: "Zanaatımızın kalbi. Bilimsel hassasiyet ve nitelikli çekirdekler.",
-    icon: "fa-bolt",
-    items: ["Signature Espresso", "Ristretto", "Americano", "Cortado", "Macchiato"]
-  },
-  {
-    title: "Sütlü Kahveler",
-    description: "İpeksi doku ve dengeli tatlılık. Her fincanda mükemmel oranlar.",
-    icon: "fa-droplet",
-    items: ["Flat White", "Caffe Latte", "Cappuccino", "Mocha", "Spanish Latte"]
-  },
-  {
-    title: "Demleme Barı",
-    description: "Kahve gurmeleri için alternatif yöntemler. Yavaş ve nitelikli.",
-    icon: "fa-flask-vial",
-    items: ["V60 Pour Over", "Chemex", "Aeropress", "Syphon", "Cold Brew (24h)"]
+    url: "/images/menu/menu-1.png",
+    alt: "ProEspresso Menü"
   }
 ];
 
 const MenuGrid: React.FC = () => {
-  return (
-    <section id="menu" className="py-32 bg-cream-25 text-coffee-900">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-24">
-          <h2 className="text-coffee-500 text-[10px] font-bold tracking-[0.5em] uppercase mb-4">Seçki</h2>
-          <h3 className="text-5xl md:text-6xl font-black tracking-tighter text-coffee-900 uppercase">DENEYİMİN <span className="text-coffee-500">TADI</span></h3>
-          <div className="w-16 h-[2px] bg-coffee-500 mx-auto mt-8 opacity-30"></div>
-        </div>
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {menuData.map((section, idx) => (
-            <div 
-              key={idx} 
-              className="group bg-white p-12 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-cream-100 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] transition-all duration-700 relative overflow-hidden rounded-sm"
+  // Otomatik geçiş (5 saniyede bir) - sadece birden fazla görsel olduğunda
+  useEffect(() => {
+    if (menuImages.length <= 1) return;
+
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+
+  // Klavye navigasyonu
+  useEffect(() => {
+    if (menuImages.length <= 1) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') prevSlide();
+      if (e.key === 'ArrowRight') nextSlide();
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [currentIndex]);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % menuImages.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + menuImages.length) % menuImages.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+  };
+
+  // Touch/Swipe handlers
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const minSwipeDistance = 50;
+
+    if (distance > minSwipeDistance) {
+      nextSlide();
+    } else if (distance < -minSwipeDistance) {
+      prevSlide();
+    }
+
+    setTouchStart(0);
+    setTouchEnd(0);
+  };
+
+  return (
+    <section id="menu" className="relative w-full bg-cream-25 overflow-hidden">
+      {/* Carousel Container */}
+      <div
+        className="relative w-full h-[60vh] md:h-[70vh] lg:h-[80vh]"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
+        {/* Images */}
+        <div className="relative w-full h-full">
+          {menuImages.map((image, index) => (
+            <div
+              key={index}
+              className={`absolute top-0 left-0 w-full h-full transition-all duration-700 ease-in-out ${index === currentIndex
+                  ? 'opacity-100 scale-100'
+                  : 'opacity-0 scale-105'
+                }`}
+              style={{
+                pointerEvents: index === currentIndex ? 'auto' : 'none'
+              }}
             >
-              <div className="absolute top-0 right-0 p-4 opacity-[0.02] group-hover:opacity-[0.06] transition-opacity duration-700">
-                <i className={`fas ${section.icon} text-9xl -rotate-12`}></i>
-              </div>
-              
-              <div className="w-14 h-14 bg-coffee-900 text-white flex items-center justify-center mb-10 group-hover:bg-coffee-500 transition-colors duration-500 shadow-lg shadow-coffee-900/10">
-                <i className={`fas ${section.icon} text-xl`}></i>
-              </div>
-              
-              <h4 className="text-2xl font-black mb-6 tracking-tight uppercase text-coffee-900">{section.title}</h4>
-              <p className="text-coffee-800/60 text-[13px] leading-relaxed mb-10 font-serif italic">
-                {section.description}
-              </p>
-              
-              <ul className="space-y-5 w-full">
-                {section.items.map((item, i) => (
-                  <li key={i} className="text-[12px] font-bold border-b border-cream-50 pb-4 flex justify-between items-center group/item hover:text-coffee-500 transition-colors cursor-pointer">
-                    <span className="tracking-widest uppercase">{item}</span>
-                    <i className="fas fa-plus text-[7px] opacity-0 group-hover/item:opacity-100 transition-all transform group-hover/item:rotate-90"></i>
-                  </li>
-                ))}
-              </ul>
+              <img
+                src={image.url}
+                alt={image.alt}
+                className="w-full h-full object-contain bg-cream-25"
+                loading={index === 0 ? 'eager' : 'lazy'}
+                style={{ objectFit: 'contain' }}
+              />
             </div>
           ))}
+        </div>
+
+        {/* Navigation Arrows - sadece birden fazla görsel varsa göster */}
+        {menuImages.length > 1 && (
+          <>
+            <button
+              onClick={prevSlide}
+              className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 md:w-14 md:h-14 bg-coffee-900/10 backdrop-blur-sm border border-coffee-900/20 text-coffee-900 flex items-center justify-center hover:bg-coffee-900/20 transition-all duration-300 group"
+              aria-label="Önceki Menü"
+            >
+              <i className="fas fa-chevron-left text-sm md:text-base group-hover:-translate-x-0.5 transition-transform"></i>
+            </button>
+
+            <button
+              onClick={nextSlide}
+              className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 md:w-14 md:h-14 bg-coffee-900/10 backdrop-blur-sm border border-coffee-900/20 text-coffee-900 flex items-center justify-center hover:bg-coffee-900/20 transition-all duration-300 group"
+              aria-label="Sonraki Menü"
+            >
+              <i className="fas fa-chevron-right text-sm md:text-base group-hover:translate-x-0.5 transition-transform"></i>
+            </button>
+          </>
+        )}
+
+        {/* Indicator Dots - sadece birden fazla görsel varsa göster */}
+        {menuImages.length > 1 && (
+          <div className="absolute bottom-6 md:bottom-8 left-0 right-0 z-10 flex justify-center items-center gap-2 md:gap-3">
+            {menuImages.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`transition-all duration-300 ${index === currentIndex
+                    ? 'w-8 md:w-10 h-2 bg-coffee-900'
+                    : 'w-2 h-2 bg-coffee-900/40 hover:bg-coffee-900/60'
+                  }`}
+                aria-label={`${index + 1}. menüye git`}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Bottom Section with Info */}
+      <div className="bg-coffee-900 text-white py-8 md:py-12">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <p className="text-coffee-400 text-xs md:text-sm font-bold tracking-[0.3em] uppercase mb-3">
+            Menü
+          </p>
+          <h2 className="text-2xl md:text-3xl font-black tracking-tight uppercase">
+            ProEspresso <span className="text-coffee-500">Lezzetleri</span>
+          </h2>
+          <div className="w-12 h-[2px] bg-coffee-500 mx-auto mt-6 opacity-50"></div>
         </div>
       </div>
     </section>

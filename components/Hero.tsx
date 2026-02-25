@@ -26,8 +26,8 @@ const Hero: React.FC = () => {
           />
         </div>
 
-        <p className="text-lg md:text-2xl text-coffee-800/80 font-light max-w-2xl mx-auto leading-relaxed mb-12 font-serif italic">
-          "Geleneksel zanaat, endüstriyel hassasiyetle buluşuyor."
+        <p className="text-lg md:text-2xl text-coffee-800/80 font-light max-w-2xl mx-auto leading-relaxed mb-12 tracking-wide">
+          "The Power of Coffee. The Art of Taste ."
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 w-full sm:w-auto">
