@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -22,8 +20,8 @@ const App: React.FC = () => {
         </section>
 
         {/* Story Section - Vizyonumuz */}
-        <section id="story" className="py-32 bg-white">
-          <div className="max-w-4xl mx-auto px-6">
+        <section id="story" className="bg-white">
+          <div className="max-w-3xl mx-auto px-6 py-32">
             <div className="space-y-10">
               <div className="space-y-4">
                 <h2 className="text-coffee-500 text-[10px] font-bold tracking-[0.5em] uppercase">Vizyonumuz</h2>
@@ -41,13 +39,17 @@ const App: React.FC = () => {
               <p className="text-coffee-900/60 leading-loose text-sm">
                 ProEspresso, en kaliteli çekirdeklerin bilimsel yöntemler ve modern teknolojiyle buluştuğu bir noktadır. Dünyanın en özel bölgelerinden seçilen hasatlarımızı, her birinin kendine özgü karakterini koruyarak kavuruyor ve profesyonel ekipmanlarla servis ediyoruz. Amacımız, kahveyi sadece bir içecek olarak değil, her yudumda hissedilen bir sanat formu olarak sunmaktır.
               </p>
+            </div>
+          </div>
 
-              <div className="pt-6">
-                <button className="group flex items-center gap-4 px-10 py-5 bg-coffee-900 text-white text-[11px] font-bold tracking-[0.3em] uppercase hover:bg-coffee-600 transition-all duration-500 shadow-xl shadow-coffee-900/10">
-                  <span>Detaylı Bilgi</span>
-                  <i className="fas fa-chevron-right text-[8px] group-hover:translate-x-1 transition-transform"></i>
-                </button>
-              </div>
+          {/* Carousel tarzı başlık bandı - içeriğin altında */}
+          <div className="bg-coffee-900 text-white py-8 md:py-12">
+            <div className="max-w-7xl mx-auto px-6 text-center">
+              <p className="text-coffee-400 text-xs md:text-sm font-bold tracking-[0.3em] uppercase mb-3">Hakkımızda</p>
+              <h2 className="text-2xl md:text-3xl font-black tracking-tight uppercase">
+                ProEspresso <span className="text-coffee-500">Vizyonu</span>
+              </h2>
+              <div className="w-12 h-[2px] bg-coffee-500 mx-auto mt-6 opacity-50"></div>
             </div>
           </div>
         </section>
@@ -61,15 +63,6 @@ const App: React.FC = () => {
 
       <Footer />
 
-      {/* Floating Action Button for Mobile / Quick Contact */}
-      <div className="fixed bottom-6 right-6 z-40 md:hidden">
-        <a
-          href="#franchise"
-          className="w-14 h-14 bg-coffee-900 rounded-full flex items-center justify-center text-white shadow-2xl border border-white/20"
-        >
-          <i className="fas fa-paper-plane text-lg"></i>
-        </a>
-      </div>
     </div>
   );
 };

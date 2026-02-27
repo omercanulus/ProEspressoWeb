@@ -1,8 +1,7 @@
-
 import React from 'react';
 
 const LocationSection: React.FC = () => {
-  const mapUrl = "https://www.google.com/maps/place//data=!4m2!3m1!1s0x14cadd75571ee583:0xa14e225f44604d1d";
+  const mapUrl = "https://www.google.com/maps/place/Pro+Espresso+Coffee+Co./@40.8494117,29.2979696,733m/data=!3m2!1e3!4b1!4m6!3m5!1s0x14caddfcf4ca30d7:0x4701a2273ce9329b!8m2!3d40.8494117!4d29.3005445!16s%2Fg%2F11n3kgf_pd";
 
   return (
     <section id="location" className="relative w-full bg-white overflow-hidden pt-32 border-t border-cream-100">
@@ -53,7 +52,7 @@ const LocationSection: React.FC = () => {
             scrolling="no"
             marginHeight={0}
             marginWidth={0}
-            src="https://maps.google.com/maps?width=100%25&height=600&hl=tr&q=Vema+Tuzla,+%C4%B0%C3%A7meler,+%C3%87a%C4%9Fda%C5%9F+Sk+No:1,+34947+Tuzla,+%C4%B0stanbul+(ProEspresso)&t=&z=16&ie=UTF8&iwloc=B&output=embed"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAkGgzRGoqU-9ZxCpUZet9en0mxhd5_Mm0&q=Pro+Espresso+Coffee+Co.&center=40.8494117,29.3005445&zoom=16&language=tr"
             className="filter saturate-[0.8] opacity-80 hover:opacity-100 transition-opacity"
           ></iframe>
         </div>

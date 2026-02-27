@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 
 const Header: React.FC = () => {
@@ -17,7 +16,7 @@ const Header: React.FC = () => {
     e.preventDefault();
     const element = document.getElementById(id);
     if (element) {
-      const offset = 80;
+      const offset = 100;
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = element.getBoundingClientRect().top;
       const elementPosition = elementRect - bodyRect;
@@ -41,8 +40,8 @@ const Header: React.FC = () => {
 
   const menuLinks = [
     { label: 'Galeri', href: '#galeri', id: 'galeri' },
-    { label: 'Menü', href: '#menu', id: 'menu' },
     { label: 'Vizyonumuz', href: '#story', id: 'story' },
+    { label: 'Menü', href: '#menu', id: 'menu' },
     { label: 'Franchise', href: '#franchise', id: 'franchise' },
     { label: 'Lokasyon', href: '#location', id: 'location' },
     { label: 'İletişim', href: '#iletisim', id: 'iletisim' }
