@@ -52,7 +52,7 @@ const LocationSection: React.FC = () => {
             scrolling="no"
             marginHeight={0}
             marginWidth={0}
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAkGgzRGoqU-9ZxCpUZet9en0mxhd5_Mm0&q=Pro+Espresso+Coffee+Co.&center=40.8494117,29.3005445&zoom=16&language=tr"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3013.5!2d29.3005445!3d40.8494117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caddfcf4ca30d7%3A0x4701a2273ce9329b!2sPro%20Espresso%20Coffee%20Co.!5e0!3m2!1str!2str!4v1"
             className="filter saturate-[0.8] opacity-80 hover:opacity-100 transition-opacity"
           ></iframe>
         </div>

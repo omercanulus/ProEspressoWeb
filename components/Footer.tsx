@@ -38,19 +38,19 @@ const Footer: React.FC = () => {
             <div>
               <h6 className="text-coffee-900 font-black text-[10px] tracking-[0.3em] uppercase mb-10">Kurumsal</h6>
               <ul className="space-y-4 text-coffee-900/60 text-[11px] font-bold uppercase tracking-widest">
-                <li><a href="#" className="hover:text-coffee-500 transition-colors">Hakkımızda</a></li>
+                <li><a href="#story" className="hover:text-coffee-500 transition-colors">Hakkımızda</a></li>
                 <li><a href="#menu" className="hover:text-coffee-500 transition-colors">Menü</a></li>
                 <li><a href="#franchise" className="hover:text-coffee-500 transition-colors">Franchise</a></li>
-                <li><a href="#" className="hover:text-coffee-500 transition-colors">İletişim</a></li>
+                <li><a href="#iletisim" className="hover:text-coffee-500 transition-colors">İletişim</a></li>
               </ul>
             </div>
 
             <div>
               <h6 className="text-coffee-900 font-black text-[10px] tracking-[0.3em] uppercase mb-10">Çalışma Saatleri</h6>
               <ul className="space-y-4 text-coffee-900/60 text-[11px] uppercase tracking-widest">
-                <li className="flex justify-between border-b border-cream-100 pb-2"><span>Hafta İçi</span> <span className="font-bold text-coffee-900">07:30 - 22:30</span></li>
-                <li className="flex justify-between border-b border-cream-100 pb-2"><span>Cumartesi</span> <span className="font-bold text-coffee-900">08:00 - 23:30</span></li>
-                <li className="flex justify-between"><span>Pazar</span> <span className="font-bold text-coffee-900">09:00 - 21:30</span></li>
+                <li className="flex justify-between border-b border-cream-100 pb-2"><span>Hafta İçi</span> <span className="font-bold text-coffee-900">08:00 - 00:00</span></li>
+                <li className="flex justify-between border-b border-cream-100 pb-2"><span>Cumartesi</span> <span className="font-bold text-coffee-900">08:00 - 00:00</span></li>
+                <li className="flex justify-between"><span>Pazar</span> <span className="font-bold text-coffee-900">08:00 - 00:00</span></li>
               </ul>
             </div>
 
