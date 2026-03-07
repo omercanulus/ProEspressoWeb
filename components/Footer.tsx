@@ -1,8 +1,10 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import LegalModal from './LegalModal';
 
 const Footer: React.FC = () => {
   const [modal, setModal] = React.useState<'kvkk' | 'gizlilik' | null>(null);
+  const { t } = useTranslation();
 
   return (
     <>
@@ -25,37 +27,37 @@ const Footer: React.FC = () => {
                   }}
                 />
               </div>
-
               <p className="text-coffee-800/50 text-xs leading-relaxed mb-8 font-serif italic">
-                Zanaatın mühendislikle buluştuğu nokta. Kusursuz kahve deneyimi için tasarlanmış modern bir yaklaşım.
+                {t('footer.tagline')}
               </p>
-
               <div className="flex space-x-6">
-                <a href="https://www.instagram.com/proespressocoffee?igsh=YnRsdHo3emhweHNq" target="_blank" rel="noopener noreferrer" className="text-coffee-900/40 hover:text-coffee-500 transition-colors"><i className="fab fa-instagram text-lg"></i></a>
+                <a href="https://www.instagram.com/proespressocoffee?igsh=YnRsdHo3emhweHNq" target="_blank" rel="noopener noreferrer" className="text-coffee-900/40 hover:text-coffee-500 transition-colors">
+                  <i className="fab fa-instagram text-lg"></i>
+                </a>
               </div>
             </div>
 
             <div>
-              <h6 className="text-coffee-900 font-black text-[10px] tracking-[0.3em] uppercase mb-10">Kurumsal</h6>
+              <h6 className="text-coffee-900 font-black text-[10px] tracking-[0.3em] uppercase mb-10">{t('footer.corporate')}</h6>
               <ul className="space-y-4 text-coffee-900/60 text-[11px] font-bold uppercase tracking-widest">
-                <li><a href="#story" className="hover:text-coffee-500 transition-colors">Hakkımızda</a></li>
-                <li><a href="#menu" className="hover:text-coffee-500 transition-colors">Menü</a></li>
-                <li><a href="#franchise" className="hover:text-coffee-500 transition-colors">Franchise</a></li>
-                <li><a href="#iletisim" className="hover:text-coffee-500 transition-colors">İletişim</a></li>
+                <li><a href="#" className="hover:text-coffee-500 transition-colors">{t('footer.about')}</a></li>
+                <li><a href="#menu" className="hover:text-coffee-500 transition-colors">{t('footer.menu')}</a></li>
+                <li><a href="#franchise" className="hover:text-coffee-500 transition-colors">{t('footer.franchise')}</a></li>
+                <li><a href="#" className="hover:text-coffee-500 transition-colors">{t('footer.contact')}</a></li>
               </ul>
             </div>
 
             <div>
-              <h6 className="text-coffee-900 font-black text-[10px] tracking-[0.3em] uppercase mb-10">Çalışma Saatleri</h6>
+              <h6 className="text-coffee-900 font-black text-[10px] tracking-[0.3em] uppercase mb-10">{t('footer.hours')}</h6>
               <ul className="space-y-4 text-coffee-900/60 text-[11px] uppercase tracking-widest">
-                <li className="flex justify-between border-b border-cream-100 pb-2"><span>Hafta İçi</span> <span className="font-bold text-coffee-900">08:00 - 00:00</span></li>
-                <li className="flex justify-between border-b border-cream-100 pb-2"><span>Cumartesi</span> <span className="font-bold text-coffee-900">08:00 - 00:00</span></li>
-                <li className="flex justify-between"><span>Pazar</span> <span className="font-bold text-coffee-900">08:00 - 00:00</span></li>
+                <li className="flex justify-between border-b border-cream-100 pb-2"><span>{t('footer.weekdays')}</span><span className="font-bold text-coffee-900">{t('footer.weekdaysHours')}</span></li>
+                <li className="flex justify-between border-b border-cream-100 pb-2"><span>{t('footer.saturday')}</span><span className="font-bold text-coffee-900">{t('footer.saturdayHours')}</span></li>
+                <li className="flex justify-between"><span>{t('footer.sunday')}</span><span className="font-bold text-coffee-900">{t('footer.sundayHours')}</span></li>
               </ul>
             </div>
 
             <div>
-              <h6 className="text-coffee-900 font-black text-[10px] tracking-[0.3em] uppercase mb-10">İletişim</h6>
+              <h6 className="text-coffee-900 font-black text-[10px] tracking-[0.3em] uppercase mb-10">{t('footer.contact')}</h6>
               <address className="not-italic text-coffee-800/60 text-xs leading-relaxed mb-8 font-serif italic">
                 Vema Tuzla, İçmeler, Çağdaş Sk No: 1<br />
                 34947 Tuzla / İstanbul, Türkiye
@@ -73,11 +75,11 @@ const Footer: React.FC = () => {
 
           <div className="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-cream-100">
             <p className="text-coffee-900/30 text-[9px] font-bold tracking-[0.3em] uppercase mb-4 md:mb-0">
-              &copy; {new Date().getFullYear()} PROESPRESSO. Tüm Hakları Saklıdır.
+              &copy; {new Date().getFullYear()} PROESPRESSO. {t('footer.rights')}
             </p>
             <div className="flex gap-8">
-              <button onClick={() => setModal("gizlilik")} className="text-coffee-900/30 text-[9px] font-bold tracking-[0.3em] uppercase hover:text-coffee-500 transition-colors">Gizlilik Politikası</button>
-              <button onClick={() => setModal("kvkk")} className="text-coffee-900/30 text-[9px] font-bold tracking-[0.3em] uppercase hover:text-coffee-500 transition-colors">KVKK</button>
+              <button onClick={() => setModal("gizlilik")} className="text-coffee-900/30 text-[9px] font-bold tracking-[0.3em] uppercase hover:text-coffee-500 transition-colors">{t('footer.privacy')}</button>
+              <button onClick={() => setModal("kvkk")} className="text-coffee-900/30 text-[9px] font-bold tracking-[0.3em] uppercase hover:text-coffee-500 transition-colors">{t('footer.kvkk')}</button>
             </div>
           </div>
         </div>

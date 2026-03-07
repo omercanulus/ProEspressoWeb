@@ -1,0 +1,102 @@
+{
+  "nav": {
+    "gallery": "Gallery",
+    "vision": "Our Vision",
+    "menu": "Menu",
+    "franchise": "Franchise",
+    "location": "Location",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "Traditional craft meets industrial precision.",
+    "exploreMenu": "Explore Menu",
+    "ourVision": "Our Vision"
+  },
+  "vision": {
+    "label": "Our Vision",
+    "title1": "DESIGNING THE",
+    "title2": "future of coffee",
+    "quote": "\"True coffee is the ability to reflect the notes from the bean's nature in their purest form into the cup.\"",
+    "description": "ProEspresso is where the finest beans meet scientific methods and modern technology. We roast our harvests, selected from the world's most unique regions, preserving each one's distinct character, and serve them with professional equipment. Our goal is to present coffee not just as a beverage, but as an art form felt in every sip.",
+    "bannerLabel": "About Us",
+    "bannerTitle1": "ProEspresso",
+    "bannerTitle2": "Vision"
+  },
+  "menu": {
+    "label": "Selection",
+    "title1": "THE TASTE OF",
+    "title2": "EXPERIENCE",
+    "espressoBar": {
+      "title": "Espresso Bar",
+      "description": "The heart of our craft. Scientific precision and quality beans."
+    },
+    "milkCoffees": {
+      "title": "Milk Coffees",
+      "description": "Silky texture and balanced sweetness. Perfect ratios in every cup."
+    },
+    "brewBar": {
+      "title": "Brew Bar",
+      "description": "Alternative methods for coffee connoisseurs. Slow and quality."
+    }
+  },
+  "franchise": {
+    "label": "Partnership",
+    "title1": "JOIN THE",
+    "title2": "PROESPRESSO FAMILY",
+    "description": "We're looking for visionary partners who share our passion. ProEspresso offers a profitable and sustainable business model blended with years of roasting experience.",
+    "formTitle": "Application Form",
+    "name": "Full Name",
+    "phone": "Phone",
+    "email": "Email",
+    "city": "Target City",
+    "budget": "Investment Budget",
+    "note": "Additional Notes",
+    "noteOptional": "(optional)",
+    "notePlaceholder": "Tell us about yourself, your goals, or the location you have in mind...",
+    "selectCity": "Select a city",
+    "selectBudget": "Select budget range",
+    "submit": "Apply Now",
+    "submitting": "Submitting...",
+    "successTitle": "Application Received",
+    "successDesc": "Our team will get in touch with you as soon as possible.",
+    "newApplication": "← New Application",
+    "errorMsg": "An error occurred. Please try again.",
+    "phoneError": "Please enter a valid phone number",
+    "brandPower": "Brand Power",
+    "brandPowerDesc": "International-standard brand identity and high customer satisfaction.",
+    "techInfra": "Technology & Infrastructure",
+    "techInfraDesc": "Latest generation equipment and professional operational systems."
+  },
+  "location": {
+    "label": "Contact & Location",
+    "title1": "REACH",
+    "title2": "us",
+    "description": "We're waiting for you at the only address for a quality coffee experience in the heart of Tuzla, at Vema.",
+    "mainStore": "Main Store",
+    "address": "Vema Tuzla, İçmeler, Çağdaş Sk No: 1,\n34947 Tuzla/Istanbul",
+    "openOnMap": "OPEN ON MAP"
+  },
+  "footer": {
+    "tagline": "Where craft meets engineering. A modern approach designed for the perfect coffee experience.",
+    "corporate": "Corporate",
+    "about": "About Us",
+    "menu": "Menu",
+    "franchise": "Franchise",
+    "contact": "Contact",
+    "hours": "Working Hours",
+    "weekdays": "Weekdays",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "weekdaysHours": "08:00 - 00:00",
+    "saturdayHours": "08:00 - 00:00",
+    "sundayHours": "08:00 - 00:00",
+    "rights": "All Rights Reserved.",
+    "privacy": "Privacy Policy",
+    "kvkk": "KVKK"
+  },
+  "carousel": {
+    "gallery": "Gallery",
+    "atmosphere": "Atmosphere",
+    "slogan": "The Power of Coffee,\nThe Art of Taste"
+  }
+}

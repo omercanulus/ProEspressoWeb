@@ -1,0 +1,102 @@
+{
+  "nav": {
+    "gallery": "Galeri",
+    "vision": "Vizyonumuz",
+    "menu": "Menü",
+    "franchise": "Franchise",
+    "location": "Lokasyon",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "tagline": "Geleneksel zanaat, endüstriyel hassasiyetle buluşuyor.",
+    "exploreMenu": "Menüyü Keşfet",
+    "ourVision": "Vizyonumuz"
+  },
+  "vision": {
+    "label": "Vizyonumuz",
+    "title1": "KAHVENİN",
+    "title2": "geleceğini tasarlıyoruz",
+    "quote": "\"Gerçek kahve, çekirdeğin doğasından gelen notaları en saf haliyle fincana yansıtabilmektir.\"",
+    "description": "ProEspresso, en kaliteli çekirdeklerin bilimsel yöntemler ve modern teknolojiyle buluştuğu bir noktadır. Dünyanın en özel bölgelerinden seçilen hasatlarımızı, her birinin kendine özgü karakterini koruyarak kavuruyor ve profesyonel ekipmanlarla servis ediyoruz. Amacımız, kahveyi sadece bir içecek olarak değil, her yudumda hissedilen bir sanat formu olarak sunmaktır.",
+    "bannerLabel": "Hakkımızda",
+    "bannerTitle1": "ProEspresso",
+    "bannerTitle2": "Vizyonu"
+  },
+  "menu": {
+    "label": "Seçki",
+    "title1": "DENEYİMİN",
+    "title2": "TADI",
+    "espressoBar": {
+      "title": "Espresso Bar",
+      "description": "Zanaatımızın kalbi. Bilimsel hassasiyet ve nitelikli çekirdekler."
+    },
+    "milkCoffees": {
+      "title": "Sütlü Kahveler",
+      "description": "İpeksi doku ve dengeli tatlılık. Her fincanda mükemmel oranlar."
+    },
+    "brewBar": {
+      "title": "Demleme Barı",
+      "description": "Kahve gurmeleri için alternatif yöntemler. Yavaş ve nitelikli."
+    }
+  },
+  "franchise": {
+    "label": "Ortaklık",
+    "title1": "PROESPRESSO",
+    "title2": "AİLESİNE KATIL",
+    "description": "Tutkumuzu paylaşan, vizyon sahibi ortaklar arıyoruz. ProEspresso, yılların birikimi olan kavurma tecrübesiyle harmanlanmış, karlı ve sürdürülebilir bir iş modeli sunar.",
+    "formTitle": "Başvuru Formu",
+    "name": "Ad Soyad",
+    "phone": "Telefon",
+    "email": "E-posta",
+    "city": "Hedef Şehir",
+    "budget": "Yatırım Bütçesi",
+    "note": "Eklemek İstedikleriniz",
+    "noteOptional": "(isteğe bağlı)",
+    "notePlaceholder": "Kendinizden, hedeflerinizden veya aklınızdaki lokasyondan bahsedebilirsiniz...",
+    "selectCity": "Şehir seçin",
+    "selectBudget": "Bütçe aralığı seçin",
+    "submit": "Hemen Başvur",
+    "submitting": "Gönderiliyor...",
+    "successTitle": "Başvurunuz Alındı",
+    "successDesc": "Ekibimiz en kısa sürede sizinle iletişime geçecektir.",
+    "newApplication": "← Yeni Başvuru Yap",
+    "errorMsg": "Bir hata oluştu. Lütfen tekrar deneyin.",
+    "phoneError": "Geçerli bir numara girin (örn: 0532 XXX XX XX)",
+    "brandPower": "Marka Gücü",
+    "brandPowerDesc": "Uluslararası standartlarda marka kimliği ve yüksek müşteri memnuniyeti.",
+    "techInfra": "Teknoloji & Altyapı",
+    "techInfraDesc": "En son nesil ekipmanlar ve profesyonel operasyonel sistemler."
+  },
+  "location": {
+    "label": "İletişim & Lokasyon",
+    "title1": "BİZE",
+    "title2": "ulaşın",
+    "description": "Tuzla'nın kalbinde, Vema'da nitelikli kahve deneyiminin tek adresinde sizi bekliyoruz.",
+    "mainStore": "Merkez Mağaza",
+    "address": "Vema Tuzla, İçmeler, Çağdaş Sk No: 1,\n34947 Tuzla/İstanbul",
+    "openOnMap": "HARİTADA AÇ"
+  },
+  "footer": {
+    "tagline": "Zanaatın mühendislikle buluştuğu nokta. Kusursuz kahve deneyimi için tasarlanmış modern bir yaklaşım.",
+    "corporate": "Kurumsal",
+    "about": "Hakkımızda",
+    "menu": "Menü",
+    "franchise": "Franchise",
+    "contact": "İletişim",
+    "hours": "Çalışma Saatleri",
+    "weekdays": "Hafta İçi",
+    "saturday": "Cumartesi",
+    "sunday": "Pazar",
+    "weekdaysHours": "08:00 - 00:00",
+    "saturdayHours": "08:00 - 00:00",
+    "sundayHours": "08:00 - 00:00",
+    "rights": "Tüm Hakları Saklıdır.",
+    "privacy": "Gizlilik Politikası",
+    "kvkk": "KVKK"
+  },
+  "carousel": {
+    "gallery": "Galeri",
+    "atmosphere": "Atmosferi",
+    "slogan": "The Power of Coffee,\nThe Art of Taste"
+  }
+}
